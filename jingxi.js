@@ -94,14 +94,14 @@ function coininfo() {
        totime = new Date(new Date().toLocaleDateString()).getTime()/1000
    if(coindata.retCode == 0){
      var i=0;
-        daytotal = Number();
-   if(coindata.data.list[0].activeId == '10000'){
+     let daytotal = Number();
+    if(coindata.data.list[0].activeId == "10000"){
      daytotal = coindata.data.list[0].accountValue;
      todaypoint = coindata.data.list[0].accountValue
    } else {
     while(coindata.data.list[i].time>totime){
          daytotal += coindata.data.list[i].accountValue;
-     if (coindata.data.list[i].activeId=='10000'){
+     if (coindata.data.list[i].activeId=="10000"){
         todaypoint = coindata.data.list[i].accountValue
           };
         i++;
