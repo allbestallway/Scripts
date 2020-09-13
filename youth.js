@@ -621,7 +621,6 @@ function earningsInfo() {
 }
  async function showmsg() {
      if ($.isNode()){
-    await notify.sendNotify($.name + " " + nick,)
   if (cash >= 10&&rotaryres.code==10010)    {
        await notify.sendNotify($.name + " " + nick, "您的余额约为"+cash+"元，已可以提现"+'\n\n'+`【收益总计】${signinfo.data.user.score}青豆  现金约${cash}元\n\n${detail}`)
       }
