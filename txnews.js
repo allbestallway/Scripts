@@ -90,8 +90,8 @@ if (isGetCookie) {
       await getTotal();
       await showmsg();
   if ($.isNode()){
-   if (readnum%notifyInterval==0){
-        await notify.sendNotify($.name+'\n'+subTile+'\n'+ detail);
+   if (readnum%notifyInterval!==0){
+        await notify.sendNotify($.name,subTile,detail);
     }
     else if (openreadred==readredtotal&&openvideored==videoredtotal){
         await notify.sendNotify($.name+` 今日任务已完成✅`+'\n'+subTile+'\n'+ detail)
