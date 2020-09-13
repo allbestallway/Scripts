@@ -95,7 +95,8 @@ return new Promise((resolve) =>{
        daytotal = Number();
      var i=0;
     while(coindata.data.list[i].time >=totime){
-     if (coindata.data.list[i].activeId==10000){
+     
+     if (coindata.data.list[i].activeId=='10000'){
         todaypoint = coindata.data.list[i].accountValue
           };
         daytotal += coindata.data.list[i].accountValue;
@@ -107,7 +108,7 @@ return new Promise((resolve) =>{
 }
 
 function doublesign() {
-return new Promise((resolve) =>{
+ return new Promise((resolve) =>{
 	const doubleurl = {
 	  url: 'https://m.jingxi.com/double_sign/IssueReward?sceneval=2&g_login_type=1&g_ty=ajax',
           headers: {
@@ -117,8 +118,7 @@ return new Promise((resolve) =>{
         }
   }
     $.get(doubleurl, (err, resp, data) => {
- 
-    doubleresult = JSON.parse(data)
+      doubleresult = JSON.parse(data)
    if (doubleresult.data.double_sign_status ==0){
     doubleres = "双签成功 🧧+ "+doubleresult.data.jd_amount/100+"元"
     $.log($.name+ ""+ doubleres)
@@ -129,7 +129,7 @@ return new Promise((resolve) =>{
 }
 
 function showmsg() {
-return new Promise((resolve) =>{
+ return new Promise((resolve) =>{
    $.sub = signresult+" 昵称:"+nickname
    $.desc = "积分总计:"+totalpoints+ signdays + '\n'+ "今日签到得"+ todaypoint+ "个金币,共计"+daytotal+ "个金币"
   $.msg($.name, $.sub, $.desc)
