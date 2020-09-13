@@ -92,7 +92,6 @@ return new Promise((resolve) =>{
   }
     $.get(coinurl, (err, resp, data) => {
      let coindata = JSON.parse(data)
-console.log(data)
        totime = new Date(new Date().toLocaleDateString()).getTime()/1000
        totalday = '';
      var i=0;
@@ -100,6 +99,7 @@ console.log(data)
         totalday += coindata.data.list[i].accountValue;
      if (coindata.data.list[i].activeId==10000){
         toaccount = coindata.data.list[i].accountValue
+         break;
           };
         i++;
        }
