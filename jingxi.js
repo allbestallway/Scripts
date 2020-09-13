@@ -97,13 +97,13 @@ return new Promise((resolve) =>{
      var i=0;
     while(coindata.data.list[i].time >=totime){
         totalday += coindata.data.list[i].accountValue;
-     if (coindata.data.list[i].activeId==10000){
+     if (coindata.data.list[i].activeId==10000&&coindata.data.list[i].time >=totime){
         toaccount = coindata.data.list[i].accountValue
          break;
           };
         i++;
        }
-        console.log(totalday)
+        console.log(toaccount)
     resolve()
    })
  })
