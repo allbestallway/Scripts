@@ -4,9 +4,6 @@
 name: youth
 
 on:
-  #push:
-    #branches: 
-     #- master 
   schedule:
      - cron: '*/3 * * * *'
   watch:
