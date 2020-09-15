@@ -4,6 +4,7 @@
 name: jingxi
 
 on:
+
  push:
   branches: 
      - master 
