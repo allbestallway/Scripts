@@ -6,7 +6,7 @@ name: jingxi
 on:
  push:
    branches: 
-     - master 
+   - master 
   schedule:
      - cron: '5 18 * * *'
   watch:
